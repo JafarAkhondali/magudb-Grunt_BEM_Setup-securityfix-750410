@@ -12,7 +12,7 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/mud/Documents/GitHub/Grunt_BEM_Setup/app/components/list/list.js",
+			"file": "app/components/list/list.js",
 			"settings":
 			{
 				"buffer_size": 417,
@@ -20,7 +20,7 @@
 			}
 		},
 		{
-			"file": "/C/Users/mud/Documents/GitHub/Grunt_BEM_Setup/app/views/users/usersController.js",
+			"file": "app/views/users/usersController.js",
 			"settings":
 			{
 				"buffer_size": 142,
@@ -28,7 +28,7 @@
 			}
 		},
 		{
-			"file": "/C/Users/mud/Documents/GitHub/Grunt_BEM_Setup/app/views/roles/rolesController.js",
+			"file": "app/views/roles/rolesController.js",
 			"settings":
 			{
 				"buffer_size": 140,
@@ -36,7 +36,7 @@
 			}
 		},
 		{
-			"file": "/C/Users/mud/Documents/GitHub/Grunt_BEM_Setup/app/views/home/homeController.js",
+			"file": "app/views/home/homeController.js",
 			"settings":
 			{
 				"buffer_size": 139,
@@ -45,7 +45,7 @@
 		},
 		{
 			"contents": "{\n	\"folders\":\n	[\n		{\n			\"follow_symlinks\": true,\n			\"path\": \"C:\\\\Users\\\\mud\\\\Documents\\\\GitHub\\\\Grunt_BEM_Setup\"\n		}\n	]\n}\n",
-			"file": "grunt_fun.sublime-project",
+			"file": "app/services/user/grunt_fun.sublime-project",
 			"file_size": -1,
 			"file_write_time": -1,
 			"settings":
@@ -156,7 +156,7 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/mud/Documents/GitHub/Grunt_BEM_Setup/app/components/list/list.js",
+					"file": "app/components/list/list.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -185,7 +185,7 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/C/Users/mud/Documents/GitHub/Grunt_BEM_Setup/app/views/users/usersController.js",
+					"file": "app/views/users/usersController.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -213,7 +213,7 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/C/Users/mud/Documents/GitHub/Grunt_BEM_Setup/app/views/roles/rolesController.js",
+					"file": "app/views/roles/rolesController.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -241,7 +241,7 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/C/Users/mud/Documents/GitHub/Grunt_BEM_Setup/app/views/home/homeController.js",
+					"file": "app/views/home/homeController.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -269,7 +269,7 @@
 				},
 				{
 					"buffer": 4,
-					"file": "grunt_fun.sublime-project",
+					"file": "app/services/user/grunt_fun.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
@@ -333,7 +333,7 @@
 	{
 		"height": 0.0
 	},
-	"project": "grunt_fun.sublime-project",
+	"project": "grunt_bem.sublime-project",
 	"replace":
 	{
 		"height": 62.0

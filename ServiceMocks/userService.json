@@ -12,12 +12,12 @@
         "href" : "http://localhost:8080/users/jdoe",
         "data" : [
           {"name" : "full-name", "value" : "J. Doe", "prompt" : "Full Name"},
-          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"}
+          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"},
           {"name" : "role", "value" : "Administrator", "prompt" : "Role"}
         ],
         "links" : [
           {"rel" : "user", "href" : "http://localhost:8080/users/jdoe", "prompt" : "Edit"},
-          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"},
+          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"}
          
         ]
       },
@@ -25,30 +25,26 @@
         "href" : "http://localhost:8080/users/jdoe",
         "data" : [
           {"name" : "full-name", "value" : "J. Doe", "prompt" : "Full Name"},
-          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"}
+          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"},
           {"name" : "role", "value" : "Administrator", "prompt" : "Role"}
         ],
         "links" : [
           {"rel" : "user", "href" : "http://localhost:8080/users/jdoe", "prompt" : "Edit"},
-          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"},
+          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"}
         ]
       },
        {
         "href" : "http://localhost:8080/users/jdoe",
         "data" : [
           {"name" : "full-name", "value" : "J. Doe", "prompt" : "Full Name"},
-          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"}
+          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"},
           {"name" : "role", "value" : "Administrator", "prompt" : "Role"}
         ],
         "links" : [
           {"rel" : "user", "href" : "http://localhost:8080/users/jdoe", "prompt" : "Edit"},
-          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"},
+          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"}
         ]
-      }
-      
-      
-    ],
-    
+      }],    
     "queries" : [
       {"rel" : "search", "href" : "http://localhost:8080/users/search", "prompt" : "Search",
         "data" : [

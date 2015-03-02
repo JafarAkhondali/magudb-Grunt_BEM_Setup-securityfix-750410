@@ -1,17 +1,21 @@
-angular.module("app.component.list", ['app.services']).directive("list", function(userService){
+angular.module("app.component.list", ['app.services']).directive("list", function(userService, $log){
 	
-	var controller = function(){
+	var controller = function($scope){
 		
 	};
 
 	var link = function($scope){
-		userService.getUsersinRole('adminstrator').then(function (data) {
-			$scope.data = data;
+		userService.getUsersInRole('adminstrator').then(function (response) {
+			$log.debug('LIST');
+			
+			$scope.template = response.template.data;
+			$scope.items = response.items;
+			$log.debug($scope.items);
 		});
 	};
 
 	return {
-		templateUrl:"/components/list/views/list.html",
+		templateUrl:"app/components/list/views/list.html",
 		controller: controller,
 		link: link,
 		controllerAs :"ctrl",

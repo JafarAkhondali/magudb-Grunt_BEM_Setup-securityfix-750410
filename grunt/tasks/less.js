@@ -13,7 +13,7 @@ module.exports = function less(grunt) {
 				cleancss: false,
 				sourceMap: true,
 				compress: false,
-				sourceMapFilename: 'content/css/main.min.css.map'
+				sourceMapFilename: 'main.min.css.map'
 			},
 			plugins: [
 			new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})			
@@ -27,7 +27,7 @@ module.exports = function less(grunt) {
 				cleancss: true,
 				sourceMap: true,
 				compress: true,
-				sourceMapFilename: 'content/css/main.min.css.map'
+				sourceMapFilename: 'main.min.css.map'
 			},
 			plugins: [
 			new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})			

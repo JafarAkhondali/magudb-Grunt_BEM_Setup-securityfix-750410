@@ -1,6 +1,16 @@
-<table>
-<tr>
-<th ng-repeat="var head in data.template.data">{{head.prompt}}</th>
-</tr>
+<table class="user-role">
+	<tr>
+		<th ng-repeat="head in template" >{{head.prompt}}</th>
+		<th></th>
+	</tr>
+
+	<tr ng-repeat="item in items" >
+		<td ng-repeat="details in item.data">
+		{{details.value}}
+		</td>
+		<td>
+			<a ng-repeat="link in item.links" href="{{link.href}}">{{link.prompt}}</a>
+		</td>
+	</tr>
 
 </table>

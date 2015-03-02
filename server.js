@@ -1,49 +1,43 @@
 var http = require("http"),
-    url = require("url"),
-    path = require("path"),
-    fs = require("fs")
-    port = process.argv[2] || 8080;
+url = require("url"),
+path = require("path"),
+fs = require("fs")
+port = process.argv[2] || 8080;
 
-var doResponse = function(response, ext, file){
+var contentTypeMap = {
+    ".svg" : "image/svg+xml",
+    ".js" : "text/javascript",
+    ".json" : "application/json",
+    ".css" : "text/css",
 
+};
 
-    if(ext === ".svg"){
-    response.writeHead(200, {
-                "Content-Type": "image/svg+xml"
-            });
-    response.write(file, "binary");
-    response.end();
-        return;
+var createResponse = function(response , file, contentType){
+    var options = {};
+
+    if(contentType){
+        options["Content-Type"] = contentType;
     }
 
-    if(ext === ".js"){
-    response.writeHead(200, {
-                "Content-Type": "text/javascript"
-            });
+    response.writeHead(200, options);
     response.write(file, "binary");
     response.end();
-        return;
-    }
+};
 
-     if(ext === ".css"){
-    response.writeHead(200, {
-                "Content-Type": "text/css"
-            });
-    response.write(file, "binary");
-    response.end();
-        return;
-    }
-
-    response.writeHead(200);
-    response.write(file, "binary");
-    response.end();
+var doResponse = function(response, ext, file, filename){
+    
+     console.log(filename, ext, contentTypeMap[ext]);  
+        createResponse(response, file, contentTypeMap[ext]);
+  
 }
 
 http.createServer(function(request, response) {
 
-    var uri = url.parse(request.url).pathname,
-        filename = path.join(process.cwd(), uri);
+    var uri = url.parse(request.url).pathname;
+    var filename = path.join(process.cwd(), uri);
+    
     console.log(uri, filename);
+    
     fs.exists(filename, function(exists) {
         if (!exists) {
             response.writeHead(404, {
@@ -66,9 +60,9 @@ http.createServer(function(request, response) {
                 return;
             }
             var ext = path.extname(filename);
-            console.log(filename, ext);
+           
 
-            doResponse(response, ext, file);
+            doResponse(response, ext, file, filename);
             
         });
     });

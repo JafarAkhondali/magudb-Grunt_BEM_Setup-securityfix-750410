@@ -11,6 +11,10 @@ module.exports = function (grunt) {
     
    
     grunt.registerTask('default', ['less:development', "ngconstant:development", "ngAnnotate:development", "ngtemplates" ,"uglify:development"]);
+
+     grunt.registerTask('development', ["ngconstant:development", "ngAnnotate:development", "ngtemplates" ,"uglify:development"]);
+   
+
    
 
 };

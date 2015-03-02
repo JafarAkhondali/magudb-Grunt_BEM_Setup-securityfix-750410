@@ -1,6 +1,6 @@
 (function(){
 	angular.module("app.views").controller("rolesController", function ($scope) {
 		var exports = {};
-		return this;
+		return exports;
 	});
 })();

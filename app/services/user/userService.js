@@ -1,17 +1,20 @@
 (function(){
-	angular.module("app.services.user", []).provider("userService",function(){
-		this.$get = (function($http, $log){
-			var exports = this;
+	'use strict';
+	angular.module("app.services.user", []).provider("userService", function(){
 
-			exports.getUsersInRole = function(role){
-				return $http.get("/serviceMocks/userService.json", function(data){
-					$log.debug(data);
-					return data;
-				})();
+		return {
+			$get: function($http, $log){
+				var exports = this;
 
-			return exports;
-		})();
+				exports.getUsersInRole = function(role){
+					return $http.get("/serviceMocks/userService.json").then(function(response){
+						$log.debug(response.data.collection);
+						return response.data.collection;
+					});
+				};
 
-		return this;
+				return exports;
+			}
+		}
 	});
 })();
