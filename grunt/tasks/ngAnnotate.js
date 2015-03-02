@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 				'scripts/main.basemodules.annotated.js':[  "app/components/components.module.js", "app/services/services.module.js", "app/views/views.module.js", "app/app.module.js"],
                 'scripts/main.enviroment.annotated.js': ["app/app.environment.js"],
                 'scripts/main.config.annotated.js': ["app/app.run.js", "app/app.config.js", "app/app.router.js"],
-                'scripts/main.code.annotated.js':["app/components/**/*.js", "app/services/**/*.js", "app/views/**/*.js", "!app/app.module.js", "!app/**/*.module.js"]
+                'scripts/main.code.annotated.js':["app/services/**/*.js","app/components/**/*.js", "app/views/**/*.js", "!app/app.module.js", "!app/**/*.module.js"]
             }
 		},
 		production: {

@@ -1,5 +1,5 @@
 (function(){
-	angular.module("app.services.user", []).provider(function(){
+	angular.module("app.services.user", []).provider("userService",function(){
 		this.$get = (function($http, $log){
 			var exports = this;
 
