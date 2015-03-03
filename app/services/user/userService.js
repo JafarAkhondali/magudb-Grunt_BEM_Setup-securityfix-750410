@@ -7,11 +7,15 @@
 				var exports = this;
 
 				exports.getUsersInRole = function(role){
-					return $http.get("/serviceMocks/userService.json").then(function(response){
-						$log.debug(response.data.collection);
+					return $http.get("/serviceMocks/userService.json").then(function(response){						
 						return response.data.collection;
 					});
 				};
+				exports.getUser = function(id){
+					return $http.get("/serviceMocks/user-"+id+".json").then(function(response){						
+						return response.data.collection.items[0];
+					});
+				} ;
 
 				return exports;
 			}

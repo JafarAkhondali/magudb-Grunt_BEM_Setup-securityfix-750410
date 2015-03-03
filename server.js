@@ -40,12 +40,7 @@ http.createServer(function(request, response) {
     
     fs.exists(filename, function(exists) {
         if (!exists) {
-            response.writeHead(404, {
-                "Content-Type": "text/plain"
-            });
-            response.write("404 Not Found\n");
-            response.end();
-            return;
+          filename = 'index.html';
         }
 
         if (fs.statSync(filename).isDirectory()) {filename += '/index.html';}

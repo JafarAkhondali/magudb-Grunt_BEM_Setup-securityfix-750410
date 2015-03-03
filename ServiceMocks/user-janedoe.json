@@ -1,0 +1,25 @@
+{ "collection" :
+  {
+    "version" : "1.0",
+    "href" : "http://example.org/users/janedoe",
+    
+    "links" : [
+      {"rel" : "feed", "href" : "http://example.org/users/rss"}     
+    ],
+    
+    "items" : [
+      {
+        "href" : "http://example.org/users/janedoe",
+        "data" : [
+          {"name" : "full-name", "value" : "Jane Doe", "prompt" : "Full Name"},
+          {"name" : "email", "value" : "Janedoe@example.org", "prompt" : "Email"},
+          {"name" : "roles", "value" : ["Administrator", "User", "Teamster"], "prompt" : "Roles"}
+        ],
+        "links" : [
+          {"rel" : "user", "href" : "http://localhost:8080/users/janendoe/delete", "prompt" : "Delete", "method":"DELETE"},       
+          {"rel" : "user", "href" : "http://localhost:8080/users/janendoe", "prompt" : "Save", "method":"POST"}   
+        ]
+      }
+    ]
+  } 
+}

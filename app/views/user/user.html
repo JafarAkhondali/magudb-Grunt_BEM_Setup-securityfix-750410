@@ -1,0 +1,25 @@
+<div class="user">
+	<form class="form-horizontal">
+	<fieldset>
+			<!-- Form Name -->
+			<legend>Edit {{user.data[0].value}}</legend>
+
+			<!-- Text input-->
+			<div class="form-group" ng-repeat="detail in user.data">
+				<label class="col-md-4 control-label" for="textinput">{{detail.prompt}}</label>  
+				<div class="col-md-4">
+					<input ng-if="!isArray(detail.value)" id="{{detail.name}}" name="{{detail.name}}" type="text" placeholder="{{detail.prompt}}" value="{{detail.value}}" class="form-control input-md" required="">
+					<select ng-if="isArray(detail.value)" id="{{detail.name}}" name="{{detail.name}}" class="form-control">
+						<option ng-repeat="str in detail.value">
+							{{str}}
+						</option>
+					</select>
+					<span class="help-block">help</span>  
+				</div>
+			</div>
+			<div class="form-group" >
+				<button ng-repeat="link in user.links" type="button" class="btn  btn-lg" ng-class="{ 'btn-primary' : (link.method === 'POST'), 'btn-danger' : link.method !== 'POST' }" ng-click="userCtrl.handle(link, user.data)">{{link.prompt}}</button>
+			</div>
+		</fieldset>
+	</form>
+</div>

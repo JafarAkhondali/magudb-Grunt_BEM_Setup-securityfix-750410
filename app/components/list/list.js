@@ -1,16 +1,19 @@
-angular.module("app.component.list", ['app.services']).directive("list", function(userService, $log){
+angular.module("app.component.list", ['app.services']).directive("list", function(userService){
 	
-	var controller = function($scope){
-		
+	var controller = function($scope, $log){
+		var exports = {};
+		 $scope.isArray = function  (val) {			
+			return angular.isArray(val);
+		}
+		return exports;
 	};
 
 	var link = function($scope){
+		//$scope.isArray = angular.isArray
 		userService.getUsersInRole('adminstrator').then(function (response) {
-			$log.debug('LIST');
-			
 			$scope.template = response.template.data;
 			$scope.items = response.items;
-			$log.debug($scope.items);
+			
 		});
 	};
 
@@ -18,7 +21,7 @@ angular.module("app.component.list", ['app.services']).directive("list", functio
 		templateUrl:"app/components/list/views/list.html",
 		controller: controller,
 		link: link,
-		controllerAs :"ctrl",
+		controllerAs :"list",
 		restrict: 'EA',
 
 	}

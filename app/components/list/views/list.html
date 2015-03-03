@@ -6,10 +6,19 @@
 
 	<tr ng-repeat="item in items" >
 		<td ng-repeat="details in item.data">
+		 <span ng-if="!isArray(details.value)">
 		{{details.value}}
+		</span>
+		<span ng-if="isArray(details.value)">
+		<p ng-repeat="str in details.value">
+			<a href="/{{details.name}}/{{str}}">{{str}}</a>
+		</p>
+		</span>
 		</td>
 		<td>
-			<a ng-repeat="link in item.links" href="{{link.href}}">{{link.prompt}}</a>
+			<a ng-repeat="link in item.links" href="{{link.href}}">
+				{{link.prompt}}
+			</a>
 		</td>
 	</tr>
 

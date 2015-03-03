@@ -9,40 +9,43 @@
     
     "items" : [
       {
-        "href" : "http://localhost:8080/users/jdoe",
+        "href" : "http://localhost:8080/users/janedoe",
         "data" : [
-          {"name" : "full-name", "value" : "J. Doe", "prompt" : "Full Name"},
-          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"},
-          {"name" : "role", "value" : "Administrator", "prompt" : "Role"}
+          {"name" : "full-name", "value" : "Jane. Doe", "prompt" : "Full Name"},
+          {"name" : "email", "value" : "janedoe@example.org", "prompt" : "Email"},
+          {"name" : "roles", "value" : ["Administrator", "User", "Teamster"], "prompt" : "Roles"}
         ],
         "links" : [
-          {"rel" : "user", "href" : "http://localhost:8080/users/jdoe", "prompt" : "Edit"},
-          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"}
+          {"rel" : "user", "href" : "http://localhost:8080/users/janedoe", "prompt" : "Edit"},
+          {"rel" : "user", "href" : "http://localhost:8080/users/janedoe/delete", "prompt" : "Delete"},
+          {"rel" : "userrole", "href" : "http://localhost:8080/roles/janedoe", "prompt" : "Roles"}
          
         ]
       },
        {
-        "href" : "http://localhost:8080/users/jdoe",
+        "href" : "http://localhost:8080/users/johndoe",
         "data" : [
-          {"name" : "full-name", "value" : "J. Doe", "prompt" : "Full Name"},
-          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"},
-          {"name" : "role", "value" : "Administrator", "prompt" : "Role"}
+          {"name" : "full-name", "value" : "John Doe", "prompt" : "Full Name"},
+          {"name" : "email", "value" : "johndoe@example.org", "prompt" : "Email"},
+          {"name" : "roles", "value" : ["Administrator", "User", "Teamster"], "prompt" : "Roles"}
         ],
         "links" : [
-          {"rel" : "user", "href" : "http://localhost:8080/users/jdoe", "prompt" : "Edit"},
-          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"}
+          {"rel" : "user", "href" : "http://localhost:8080/users/johndoe", "prompt" : "Edit"},
+          {"rel" : "user", "href" : "http://localhost:8080/users/johndoe/delete", "prompt" : "Delete"},
+          {"rel" : "role", "href" : "http://localhost:8080/roles/johndoe", "prompt" : "Roles"}
         ]
       },
        {
-        "href" : "http://localhost:8080/users/jdoe",
+        "href" : "http://localhost:8080/users/jimmydoe",
         "data" : [
-          {"name" : "full-name", "value" : "J. Doe", "prompt" : "Full Name"},
-          {"name" : "email", "value" : "jdoe@example.org", "prompt" : "Email"},
-          {"name" : "role", "value" : "Administrator", "prompt" : "Role"}
+          {"name" : "full-name", "value" : "Jimmy Doe", "prompt" : "Full Name"},
+          {"name" : "email", "value" : "jimmy@example.org", "prompt" : "Email"},
+          {"name" : "roles", "value" : ["Administrator", "User", "Teamster"], "prompt" : "Roles"}
         ],
         "links" : [
-          {"rel" : "user", "href" : "http://localhost:8080/users/jdoe", "prompt" : "Edit"},
-          {"rel" : "user-roles", "href" : "http://localhost:8080/users/jdoe/roles", "prompt" : "Roles"}
+          {"rel" : "user", "href" : "http://localhost:8080/users/jimmydoe", "prompt" : "Edit"},
+          {"rel" : "user", "href" : "http://localhost:8080/users/jimmydoe/delete", "prompt" : "Delete"},
+          {"rel" : "role", "href" : "http://localhost:8080/roles/jimmydoe", "prompt" : "Roles"}
         ]
       }],    
     "queries" : [
