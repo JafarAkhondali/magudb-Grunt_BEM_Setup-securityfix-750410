@@ -19,12 +19,15 @@ module.exports = function (grunt) {
                 'scripts/main.min.js': [
                     'bower_components/angular/angular.js',
                     'bower_components/angular-route/angular-route.js',
-                    'scripts/main.modules.annotated.js',
-                    'scripts/main.basemodules.annotated.js',
-                    'scripts/main.enviroment.annotated.js',
-                    'scripts/main.code.annotated.js',
-                    'app/app.templates.js',
-                    'scripts/main.config.annotated.js']
+                    'scripts/main.environment.config.js',
+                    'scripts/main.services.js',
+                    'scripts/main.services.modules.js',
+                    'scripts/main.components.js',
+                    'scripts/main.components.modules.js',
+                    'scripts/main.modules.js',           
+                    'scripts/main.templates.js',         
+                    'scripts/main.views.js',                    
+                    'scripts/main.config.js']
             }
 		},
 		production: {
@@ -34,16 +37,19 @@ module.exports = function (grunt) {
                 },
                 mangle: true
             },			
-			  files: {
+            files: {
                 'scripts/main.min.js': [
                     'bower_components/angular/angular.js',
-                    'bower_components/angular-route/angular-route.js',                    
-                    'scripts/main.modules.annotated.js',
-                    'scripts/main.basemodules.annotated.js',
-                    'scripts/main.enviroment.annotated.js',
-                    'scripts/main.code.annotated.js',
-                    'app/app.templates.js',
-                    'scripts/main.config.annotated.js']
+                    'bower_components/angular-route/angular-route.js',
+                    'scripts/main.environment.config.js',
+                    'scripts/main.services.js',
+                    'scripts/main.services.modules.js',
+                    'scripts/main.components.js',
+                    'scripts/main.components.modules.js',
+                    'scripts/main.modules.js',           
+                    'scripts/main.templates.js',         
+                    'scripts/main.views.js',                    
+                    'scripts/main.config.js']
             }         
             
 		}

@@ -7,12 +7,11 @@ module.exports = function(grunt) {
 	return {
 		options: {
 			name: 'app.environment',
-			dest: 'app/app.environment.js',
-			constants: {
-				package: grunt.file.readJSON('package.json')
-			},
+			dest: 'scripts/main.environment.js',			
 			values: {				
-				version: "1.0.0.0"
+				version: grunt.file.readJSON('package.json').version,
+				productname: grunt.file.readJSON('package.json').name,
+				debug:true,
 			}
 		},
 		development: {
@@ -44,6 +43,8 @@ module.exports = function(grunt) {
 			},
 			values: {
 				debug: false,
+				version: grunt.file.readJSON('package.json').version,
+				productname: grunt.file.readJSON('package.json').name
 				
 			}
 		}

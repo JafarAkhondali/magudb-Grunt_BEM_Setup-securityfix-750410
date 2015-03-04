@@ -1,4 +1,4 @@
-angular.module("app.component.list", ['app.services']).directive("list", function(userService){
+/*angular.module("app.component.list", ['app.services']).directive("list", function(userService){
 	
 	var controller = function($scope, $log){
 		var exports = {};
@@ -25,4 +25,4 @@ angular.module("app.component.list", ['app.services']).directive("list", functio
 		restrict: 'EA',
 
 	}
-});
+});*/

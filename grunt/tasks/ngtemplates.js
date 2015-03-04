@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         },
         app:        {
             src:      'app/**/*.html',
-            dest:     'app/app.templates.js'          
+            dest:     'scripts/main.templates.js'          
         }
         
     };
