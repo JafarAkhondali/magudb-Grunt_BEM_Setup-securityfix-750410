@@ -9,6 +9,7 @@ var contentTypeMap = {
     ".js" : "text/javascript",
     ".json" : "application/json",
     ".css" : "text/css",
+    ".html": "text/html"
 
 };
 
